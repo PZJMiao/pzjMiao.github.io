@@ -10,7 +10,7 @@
     <meta name="keywords" content=",iOS图文混排">
     <title>iOS图文混排 - 喵小萌</title>
     <link rel="shortcut icon" href="../../../../../../../img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="../../../../../../../css/index.css?v=1483923822490">
+    <link rel="stylesheet" type="text/css" href="../../../../../../../css/index.css?v=1484105164821">
 </head>
 <body>
 <a href="https://www.github.com/pzjmiao" target="_blank" class="github-corner">
@@ -199,14 +199,17 @@
     <span class="hljs-keyword">return</span> attributedString;
 }
 </code></pre>
-<h3 id="使用案例">使用案例</h3><pre><code class="lang-ObjectiveC"><span class="hljs-built_in">NSMutableAttributedString</span> *desc= [FHLib getSpannableString:[_waybill getRichUserInfo]];
+<h3 id="使用案例">使用案例</h3><pre><code class="lang-ObjectiveC"><span class="hljs-comment">//@图片名称  spData是图片的名称</span>
+<span class="hljs-comment">//【我是一张图片@图片名称 ,我是另一张图片@图片名称】 解析@图片名称 显示图文混排</span>
+<span class="hljs-built_in">NSString</span> *str = [<span class="hljs-built_in">NSString</span> stringWithFormat:<span class="hljs-string">@"@spData %@"</span>,_curtime];
+<span class="hljs-built_in">NSMutableAttributedString</span> *desc= [FHLib getSpannableString:str];
 [_labelUser setAttributedText:desc];
 </code></pre>
 
 </div>
 
-<script type="text/javascript" src="../../../../../../../js/dt.js?v=1483923822491"></script>
-<script type="text/javascript" src="../../../../../../../js/index.js?v=1483923822491"></script>
+<script type="text/javascript" src="../../../../../../../js/dt.js?v=1484105164822"></script>
+<script type="text/javascript" src="../../../../../../../js/index.js?v=1484105164822"></script>
 </body>
 
 </html>
